@@ -29,6 +29,7 @@ const mongoose = require("mongoose");
 
 //require express handlebars
 // Set the view engine and file extension
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.engine("hbs", hbs({ defaultLayout: "main", extname: "hbs" }));
 app.set("view engine", "hbs");
 
