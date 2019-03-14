@@ -2,6 +2,7 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv").config();
+const favicon = require('serve-favicon');
 //require handlebars
 const hbs = require("express-handlebars");
 //body-parser
