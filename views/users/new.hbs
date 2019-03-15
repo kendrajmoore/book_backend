@@ -1,0 +1,36 @@
+
+    
+{{> header}}
+{{> nav}}
+<div class="row" id="profile-form">
+    <div class="col-sm-6 col-sm-offset-3">
+            <form action="/users/new" method="POST">
+                <fieldset>
+                    <legend class="profile-title">User Profile</legend>
+                
+                    <!--USER NAME-->
+                    <div class="form-group">
+                        <label for="username">Username</label><br>
+                        <input class="form-control" id="username" type="text" name="username" placeholder="Enter username"/>
+                    </div>
+                    <!--PASSWORD-->
+                    <div class="form-group">
+                        <label for="password">Password</label><br>
+                        <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
+                    </div>
+                     <!--USER EMAIL ADDRESS-->
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address</label><br>
+                        <input class="form-control" id="emailAddress" name="emailAddress" placeholder="Email"/>
+                    </div>
+              
+
+                <!-- SAVE BUTTON -->
+                <div class="form-group">
+                   <button class="btn btn-primary" id="save-btn" type="submit">Save Preference</button>
+               </div>
+            </form>
+            <!-- CANCEL LINK -->
+            <a href="/">Cancel</a>
+    </div>
+</div>

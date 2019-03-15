@@ -1,0 +1,39 @@
+{{> header}}
+{{> nav}}
+    
+<form action='/books/{{book._id}}?_method=PUT' method='POST' >
+    <fieldset>
+        <legend>Edit Book</legend>
+
+
+         <!--Book Name-->
+        <p>
+            <label for="book-name">Book Name</label><br>
+            <input id="book-name" type="text" name="name" value="{{book.name}}"/>
+        </p>
+
+         <!--Category-->
+        <p>
+            <label for="book-category">Category</label><br>
+            <input id="book-category" type="text" name="book-category" value="{{book.category}}"/>
+        </p>
+
+         <!--Photos-->
+        <p>
+            <label for="photos">Photos</label><br>
+            <input id="photos" type="text" name="photos"/>
+        </p>
+
+        <!-- recording -->
+        <p>
+           <label for="recording">Recording</label><br>
+           <input id="recording" type="recording" name="recording"/>
+       </p>
+
+    </fieldset>
+
+<!-- SAVE BUTTON -->
+    <p>
+       <button type="submit">Save Book</button>
+   </p>
+</form>

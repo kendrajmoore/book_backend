@@ -81,6 +81,9 @@ app.use(checkAuth);
 const usersController = require("./controllers/users");
 app.use(usersController);
 
+const booksController = require("./controllers/books");
+app.use(booksController);
+
 //index page
 app.get("/", (req, res) => {
     res.send("bruh");

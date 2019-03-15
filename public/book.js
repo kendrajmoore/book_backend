@@ -48,6 +48,7 @@ function newPage(element) {
   
   //the last page of your book should have the bookBack class. This is what happens when you click it.
   $('.bookBack').on("click", function() {
+    console.log('click')
   
     //rotate back every page in descending order here.
     $('.fifthPage').css('transform', 'rotateY(0deg)');
