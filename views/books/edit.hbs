@@ -12,6 +12,12 @@
             <input id="book-name" type="text" name="name" value="{{book.name}}"/>
         </p>
 
+           <!--Author-->
+        <p>
+            <label for="book-category">Author</label><br>
+            <input id="book-author" type="text" name="book-author" value="{{book.author}}"/>
+        </p>
+
          <!--Category-->
         <p>
             <label for="book-category">Category</label><br>
@@ -27,11 +33,16 @@
         <!-- recording -->
         <p>
            <label for="recording">Recording</label><br>
-           <input id="recording" type="recording" name="recording"/>
+           <input id="recording" type="text" name="recording"/>
+       </p>
+
+        <!-- page-one -->
+        <p>
+           <label for="page-one">Page One</label><br>
+           <textarea id="page-one" type="" name="recording"/>
        </p>
 
     </fieldset>
-
 <!-- SAVE BUTTON -->
     <p>
        <button type="submit">Save Book</button>
