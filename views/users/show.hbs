@@ -1,0 +1,19 @@
+
+{{> nav}}
+<div class="row" id="account">
+    <div class="col-sm-6 col-sm-offset-3">
+        <h1 class="account-view-title">Account Information</h1>
+        <h3>Username: {{user.username}}</h3>
+        <p>Email: {{user.emailAddress}}</p>
+    
+
+        <!-- Buttons-->
+        <p><a class="button is-success" href="/users/{{user._id}}/edit">Edit</a></p>
+        <a class="button is-success" href="/">Back</a><br>
+        <p>
+            <form method="POST" action="/users/{{user._id}}?_method=DELETE">
+               <button class="button is-danger" type="submit">Delete</button>
+           </form>
+        </p>
+    </div>
+</div>

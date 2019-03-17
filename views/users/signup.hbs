@@ -1,19 +1,21 @@
 {{> header}}
-<div class='row'>
 
-      <div style='width: 30%; margin: 25px auto;'>
-          <form action='/users/new' method='POST'>
-              <div class='form-group'>
-                <h1>Sign Up</h1>
-                  <input class='input is-large' type='text' name='username' placeholder='username'>
-              </div>
-              <div class='form-group'>
-                  <input class='input is-large' type='password' name='password' placeholder='password'>
-              </div>
-              <div class='form-group'>
-                  <button  class='button is-block is-info is-large is-fullwidth'>Sign Up!</button>
-              </div>
-          </form>
-          <a href='/'>Go Back</a>
-      </div>
+
+  <form action='/users/new' method='POST'>
+  <div class="form-group">
+      <h1>Sign Up</h1>
+    <label for="Email">Email address</label>
+    <input type="email" class="form-control" id="email" name='email' aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
+   <div class="form-group">
+    <label for="Username">Username</label>
+    <input type="username" class="form-control" id="username" name='username' placeholder="username">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="password" name='password' placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<a href='/'>Go Back</a>

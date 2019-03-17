@@ -6,3 +6,8 @@ html, body {
 body {
     background-color: #8D50F7;
 }
+
+button.btn.btn-primary {
+    background-color: #8ccdb0 !important;
+    border-color: #8ccdb0 !important;
+}

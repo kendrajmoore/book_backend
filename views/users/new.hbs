@@ -1,36 +1,21 @@
-
-    
 {{> header}}
-{{> nav}}
-<div class="row" id="profile-form">
-    <div class="col-sm-6 col-sm-offset-3">
-            <form action="/users/new" method="POST">
-                <fieldset>
-                    <legend class="profile-title">User Profile</legend>
-                
-                    <!--USER NAME-->
-                    <div class="form-group">
-                        <label for="username">Username</label><br>
-                        <input class="form-control" id="username" type="text" name="username" placeholder="Enter username"/>
-                    </div>
-                    <!--PASSWORD-->
-                    <div class="form-group">
-                        <label for="password">Password</label><br>
-                        <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
-                    </div>
-                     <!--USER EMAIL ADDRESS-->
-                    <div class="form-group">
-                        <label for="emailAddress">Email Address</label><br>
-                        <input class="form-control" id="emailAddress" name="emailAddress" placeholder="Email"/>
-                    </div>
-              
 
-                <!-- SAVE BUTTON -->
-                <div class="form-group">
-                   <button class="btn btn-primary" id="save-btn" type="submit">Save Preference</button>
-               </div>
-            </form>
-            <!-- CANCEL LINK -->
-            <a href="/">Cancel</a>
-    </div>
-</div>
+
+  <form action='/users/new' method='POST'>
+  <div class="form-group">
+      <h1>Sign Up</h1>
+    <label for="Email">Email address</label>
+    <input type="email" class="form-control" id="email" name='email' aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+   <div class="form-group">
+    <label for="Username">Username</label>
+    <input type="username" class="form-control" id="username" name='username' placeholder="username">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="password" name='password' placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<a href='/'>Go Back</a>
