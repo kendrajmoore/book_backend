@@ -21,6 +21,28 @@ router.get("/books", (req, res) => {
     });
 });
 
+const BookSchema = new Schema({
+  name: String,
+  author: String,
+  category: String,
+  photos: String,
+  recording: String,
+  pageOne: String, 
+  pageTwo: String, 
+  pageThree: String, 
+  pageFour: String, 
+  pageFive: String, 
+  pageSix: String, 
+  pageSeven: String, 
+  pageEight: String, 
+  pageNine: String, 
+  pageTen: String, 
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'user'
+  }
+});
+
 
 //CREATE
 router.post('/books', (req, res) => {
@@ -29,8 +51,20 @@ router.post('/books', (req, res) => {
     let photos = req.body.photos;
     let recording = req.body.recording;
     let user = req.user;
+    let pageOne = req.body.pageOne; 
+    let pageTwo = req.body.pageTwo;  
+    let pageThree = req.body.pageThree;
+    let pageFour = req.body.pageFour; 
+    let pageFive = req.body.pageFive; 
+    let pageSix = req.body.pageSix;  
+    let pageSeven = req.body.pageSeven;  
+    let pageEight = req.body.pageEight;
+    let pageNine = req.body.pageNine; 
+    let pageTen = req.body.pageTen;
   
-    let book = new Book({ name: name, category: category, photos: photos, recording: recording, user: user.id });
+    let book = new Book({ name: name, category: category, photos: photos, recording: recording, pageOne: pageOne, 
+      pageTwo: pageTwo, pageThree: pageThree, pageFour: pageFour, pageFive: pageFive, pageSix: pageSix,
+      pageSeven: pageSeven, pageEight: pageEight, pageNine: pageNine, pageTen: pageTen, user: user.id });
     book.save()
     .then(function (savedBook) {
       res.redirect('/books/' + savedBook.id);
