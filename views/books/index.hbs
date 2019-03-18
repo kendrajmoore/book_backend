@@ -6,7 +6,8 @@
 
 <a href="/books/new">New Book</a>
 
-
+ <div class="row">
+   {{#each books}}
 <div class="bookContainer">
 
 
@@ -94,7 +95,10 @@
     }
   </style>
  
-</div><!--bookContainer-->
+</div>
+</div>
+{{/each}}
+<!--bookContainer-->
 
  {{!-- <div class="row">
 {{#each books}}
