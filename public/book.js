@@ -43,6 +43,20 @@ function newPage(element) {
   newPage('.thirdPage');
   
   newPage('.fourthPage');
+
+  newPage('.fifthPage');
+
+  newPage('.sixthPage');
+
+  newPage('.seventhPage');
+
+  newPage('.eighthPage');
+
+  newPage('.ninthPage');
+
+  newPage('.tenthPage');
+
+  newPage('.eleventhPage');
   
   
   
@@ -51,6 +65,12 @@ function newPage(element) {
     console.log('click')
   
     //rotate back every page in descending order here.
+    $('.eleventhPage').css('transform', 'rotateY(0deg)');
+    $('.tenthPage').css('transform', 'rotateY(0deg)');
+    $('.ninthPage').css('transform', 'rotateY(0deg)');
+    $('.eigthPage').css('transform', 'rotateY(0deg)');
+    $('.seventhPage').css('transform', 'rotateY(0deg)');
+    $('.sixthPage').css('transform', 'rotateY(0deg)');
     $('.fifthPage').css('transform', 'rotateY(0deg)');
     $('.fourthPage').css('transform', 'rotateY(0deg)');
     $('.thirdPage').css('transform', 'rotateY(0deg)');
