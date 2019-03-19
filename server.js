@@ -86,7 +86,7 @@ app.use(booksController);
 
 //index page
 app.get("/", (req, res) => {
-    res.send("bruh");
+    res.render("index");
 });
 
 //404 page

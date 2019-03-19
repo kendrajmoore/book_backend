@@ -13,21 +13,25 @@
 /*This is your book world. Change the height, width, and position as needed.
 Please keep perspective at 2000px*/
 .bookContainer {
-    position: absolute;
+    /* position: absolute; */
     height: 100%;
     width: 100%;
-    perspective: 2000px;
+    /* perspective: 2000px;  */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   
   /*Here is the book. You can play with the size of it, but you'll need to adjust your other values when you do.
   By default the book is displayed in the center of your bookContainer*/
   .book {
     /* position: absolute; */
-    /* top: 0;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto; */
+    margin: auto;
     height: 400px;
     width: 300px;
     perspective: 1400px;
@@ -38,7 +42,7 @@ Please keep perspective at 2000px*/
     transform: rotateY(-35deg) rotateX(0deg) scale(1);
   
     /*uncomment this to spin your book around on page load.*/
-    /*animation: rotate 10s infinite linear;*/
+    /* animation: rotate 10s infinite linear; */
   }
   
   /*This is where you can change the books state on hover.*/
@@ -110,11 +114,11 @@ Please keep perspective at 2000px*/
     content: "";
     height: 400px;
     width: 107px;
-    /* position: absolute;
+    position: absolute;
     right: 0;
     left: 243px;
     top: 0;
-    bottom: 0; */
+    bottom: 0; 
     margin: auto;
     background: repeating-linear-gradient(90deg, #000, #000 1px, #9198e5 1px, #9198e5 4px);
     transform: rotateY(90deg) translateX(54px);
