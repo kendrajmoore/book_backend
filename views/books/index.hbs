@@ -7,11 +7,9 @@
 <a href="/books/new">New Book</a>
 
 
-{{#each books}}
- <div class="row">
-
 <div class="bookContainer">
-
+<div class="row">
+{{#each books}}
 
   <!--this is the whole book-->
   <div class="book hoveit">
@@ -107,19 +105,8 @@
   </style>
  
 </div>
-</div>
 {{/each}}
-<!--bookContainer-->
+</div>
+</div>
 
- {{!-- <div class="row">
-{{#each books}}
-<div class="col-sm-4">
-    <div class="card" style="margin:5px;">
-         <div class="card-body">
-    <h2><a href="/books/{{this._id}}">{{this.name}}</a></h2>
-    <small>{{this.category}}</small>
-    </div>
-    </div>
-     </div>
-    </div>
-{{/each}} --}}
+

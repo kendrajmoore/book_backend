@@ -22,12 +22,12 @@ Please keep perspective at 2000px*/
   /*Here is the book. You can play with the size of it, but you'll need to adjust your other values when you do.
   By default the book is displayed in the center of your bookContainer*/
   .book {
-    position: absolute;
-    top: 0;
+    /* position: absolute; */
+    /* top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto;
+    margin: auto; */
     height: 400px;
     width: 300px;
     perspective: 1400px;
@@ -110,11 +110,11 @@ Please keep perspective at 2000px*/
     content: "";
     height: 400px;
     width: 107px;
-    position: absolute;
+    /* position: absolute;
     right: 0;
     left: 243px;
     top: 0;
-    bottom: 0;
+    bottom: 0; */
     margin: auto;
     background: repeating-linear-gradient(90deg, #000, #000 1px, #9198e5 1px, #9198e5 4px);
     transform: rotateY(90deg) translateX(54px);
@@ -129,7 +129,7 @@ Please keep perspective at 2000px*/
   
   /*Here is the back of your book. Feel free to change the background color*/
   .backBook {
-    position: absolute;
+    /* position: absolute; */
     content: '';
     height: 400px;
     width: 300px;
