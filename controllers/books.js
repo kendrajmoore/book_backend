@@ -13,36 +13,13 @@ router.get("/books", (req, res) => {
   Book.find()
     // Provide a function for the Promise to call when it resolves- when it finished whatever it was doing.
     .then(books => {
-      res.render("books/index.hbs", { books });
+      res.render("books/index.hbs", { books, currentUser: req.user });
     })
     // Provide a function for the promise to call if it is rejected. A Promise is rejected if it fails.
     .catch(err => {
       console.log(err);
     });
 });
-
-const BookSchema = new Schema({
-  name: String,
-  author: String,
-  category: String,
-  photos: String,
-  recording: String,
-  pageOne: String, 
-  pageTwo: String, 
-  pageThree: String, 
-  pageFour: String, 
-  pageFive: String, 
-  pageSix: String, 
-  pageSeven: String, 
-  pageEight: String, 
-  pageNine: String, 
-  pageTen: String, 
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'user'
-  }
-});
-
 
 //CREATE
 router.post('/books', (req, res) => {
@@ -82,7 +59,7 @@ router.get("/books/new", (req, res) => {
 router.get("/books/:id", (req, res) => {
   Book.findById(req.params.id)
     .then(book => {
-      res.render("books/show.hbs", { book });
+      res.render("books/show.hbs", { book, currentUser: req.user });
     })
     .catch(err => {
       console.log(err.message);
@@ -96,12 +73,12 @@ router.get("/books/:id/edit", (req, res) => {
         res.redirect("/user/login");
     }
     Book.findById(req.params.id, function(err, book) {
-    res.render("books/edit.hbs", { book });
+    res.render("books/edit.hbs", { book, currentUser: req.user });
   });
 });
 //
 //UPDATE
-router.put("/restaurants/:id", (req, res) => {
+router.put("/books/:id", (req, res) => {
     if (currentUser === null) {
         res.redirect("/user/login");
     }

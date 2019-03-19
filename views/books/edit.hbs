@@ -1,6 +1,6 @@
 {{> header}}
 {{> nav}}
-    
+
 <form action='/books/{{book._id}}?_method=PUT' method='POST' >
     <fieldset>
         <legend>Edit Book</legend>
@@ -27,19 +27,73 @@
          <!--Photos-->
         <p>
             <label for="photos">Photos</label><br>
-            <input id="photos" type="text" name="photos"/>
+            <input id="photos" type="text" name="photos" value="{{book.category}}"/>
         </p>
 
         <!-- recording -->
         <p>
            <label for="recording">Recording</label><br>
-           <input id="recording" type="text" name="recording"/>
+           <input id="recording" type="text" name="recording" value="{{book.recording}}"/>
        </p>
 
         <!-- page-one -->
         <p>
            <label for="page-one">Page One</label><br>
-           <textarea id="page-one" type="" name="recording"/>
+           <textarea id="page-one" type="" name="pageOne" value="{{book.pageOne}}"/>
+       </p>
+
+           <!-- page-two -->
+        <p>
+           <label for="page-two">Page Two</label><br>
+           <textarea id="page-two" type="text" name="pageTwo" value="{{book.pageTwo}}"/>
+       </p>
+
+           <!-- page-three -->
+        <p>
+           <label for="page-three">Page Three</label><br>
+           <textarea id="page-three " type="text" name="pageThree" value="{{book.pageThree}}"/>
+       </p>
+
+           <!-- page-four -->
+        <p>
+           <label for="page-four">Page Four</label><br>
+           <textarea id="page-four" type="text" name="pageFour" value="{{book.pageFour}}"/>
+       </p>
+
+           <!-- page-five -->
+        <p>
+           <label for="page-five">Page Five</label><br>
+           <textarea id="page-five" type="text" name="pageFive" value="{{book.pageFive}}"/>
+       </p>
+
+           <!-- page-six -->
+        <p>
+           <label for="page-six">Page Six</label><br>
+           <textarea id="page-six" type="text" name="pageSix" value="{{book.pageSix}}"/>
+       </p>
+
+           <!-- page-seven -->
+        <p>
+           <label for="page-seven">Page Seven</label><br>
+           <textarea id="page-seven" type="text" name="pageSeven" value="{{book.pageSeven}}"/>
+       </p>
+
+           <!-- page-eignt -->
+        <p>
+           <label for="page-eignt">Page Eight</label><br>
+           <textarea id="page-eignt" type="text" name="pageEight" value="{{book.pageEight}}"/>
+       </p>
+
+           <!-- page-nine -->
+        <p>
+           <label for="page-nine">Page Nine</label><br>
+           <textarea id="page-nine" type="text" name="pageNine" value="{{book.pageNine}}"/>
+       </p>
+
+           <!-- page-ten -->
+        <p>
+           <label for="page-ten">Page Ten</label><br>
+           <textarea id="page-ten" type="text" name="pageTen" value="{{book.pageTen}}"/>
        </p>
 
     </fieldset>
