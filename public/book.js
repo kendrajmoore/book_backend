@@ -55,8 +55,6 @@ function newPage(element) {
   newPage('.ninthPage');
 
   newPage('.tenthPage');
-
-  newPage('.eleventhPage');
   
   
   
@@ -65,7 +63,6 @@ function newPage(element) {
     console.log('click')
   
     //rotate back every page in descending order here.
-    $('.eleventhPage').css('transform', 'rotateY(0deg)');
     $('.tenthPage').css('transform', 'rotateY(0deg)');
     $('.ninthPage').css('transform', 'rotateY(0deg)');
     $('.eigthPage').css('transform', 'rotateY(0deg)');

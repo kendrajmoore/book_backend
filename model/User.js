@@ -6,7 +6,8 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
   username: String,
   emailAddress: String,
-  password: String
+  password: String,
+  bookList: String
 });
 
 // Must use function here! ES6 => functions do not bind this!

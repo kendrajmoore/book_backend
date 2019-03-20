@@ -133,7 +133,7 @@ Please keep perspective at 2000px*/
   
   /*Here is the back of your book. Feel free to change the background color*/
   .backBook {
-    /* position: absolute; */
+    position: absolute;
     content: '';
     height: 400px;
     width: 300px;

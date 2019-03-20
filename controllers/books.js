@@ -51,7 +51,7 @@ router.post('/books', (req, res) => {
 
 //NEW
 router.get("/books/new", (req, res) => {
-  res.render("books/new.hbs");
+  res.render("books/new.hbs", { currentUser: req.user });
 });
 
 
@@ -59,7 +59,7 @@ router.get("/books/new", (req, res) => {
 router.get("/books/:id", (req, res) => {
   Book.findById(req.params.id)
     .then(book => {
-      res.render("books/show.hbs", { book, currentUser: req.user });
+      res.render("books/show.hbs", {book, currentUser: req.user });
     })
     .catch(err => {
       console.log(err.message);
@@ -73,7 +73,7 @@ router.get("/books/:id/edit", (req, res) => {
         res.redirect("/user/login");
     }
     Book.findById(req.params.id, function(err, book) {
-    res.render("books/edit.hbs", { book, currentUser: req.user });
+    res.render("books/edit.hbs", { currentUser: req.user });
   });
 });
 //
