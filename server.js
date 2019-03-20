@@ -13,6 +13,9 @@ const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 //delete, edit
 const methodOverride = require("method-override");
+//for video recording
+const fs = require('file-system');
+const url = require('url');
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
 
@@ -78,6 +81,7 @@ var checkAuth = (req, res, next) => {
 };
 app.use(checkAuth);
 
+
 const usersController = require("./controllers/users");
 app.use(usersController);
 
@@ -91,7 +95,7 @@ app.get("/", (req, res) => {
 
 //404 page
 app.get("*", (req, res) => {
-    res.send("no");
+    res.render("error");
 });
 
 //port

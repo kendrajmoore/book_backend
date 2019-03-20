@@ -20,7 +20,7 @@ Please keep perspective at 2000px*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   
   /*Here is the book. You can play with the size of it, but you'll need to adjust your other values when you do.
@@ -100,7 +100,7 @@ Please keep perspective at 2000px*/
       top: 0;
       bottom: 0;
       margin: auto;
-      background: #AB4747;
+      background: #8ccdb0;
       transform: rotateY(-90deg) translateY(0px) translateX(-54px);
       border: solid 3px black;
       color: white;
@@ -138,7 +138,7 @@ Please keep perspective at 2000px*/
     height: 400px;
     width: 300px;
     margin: auto;
-    background: #AB4747;
+    background: #8ccdb0;
     transform: rotateY(180deg) translateZ(108px) translateX(0px) rotateX(0deg);
     border: solid 3px black;
     border-right: none;
@@ -151,7 +151,7 @@ Please keep perspective at 2000px*/
     width: 100%;
     border: solid 1px black;
     height: 400px;
-    background: brown;
+    background: #F6AF42;
     position: absolute;
     top: 0;
     color: white;

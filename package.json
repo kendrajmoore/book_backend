@@ -18,13 +18,15 @@
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
+    "file-system": "^2.2.2",
     "flipbook-library": "^1.0.2",
     "jsonwebtoken": "^8.5.0",
     "method-override": "^3.0.0",
     "mongoose": "^5.4.19",
     "mongoose-deep-populate": "^3.1.1",
     "morgan": "^1.9.1",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "supertest": "^4.0.2"

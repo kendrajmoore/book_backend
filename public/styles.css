@@ -7,6 +7,14 @@ h1 {
     color: #8ccdb0;
 }
 
+img.error {
+  padding-left: 400px;
+}
+
+img.logo {
+    padding-left: 400px;
+  }
+
 label {
     color: #8ccdb0;
 }
@@ -29,6 +37,11 @@ legend {
 }
 
 button.btn.btn-primary {
+    background-color: #8ccdb0 !important;
+    border-color: #8ccdb0 !important;
+}
+
+.btn-danger {
     background-color: #8ccdb0 !important;
     border-color: #8ccdb0 !important;
 }

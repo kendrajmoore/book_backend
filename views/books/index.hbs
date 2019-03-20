@@ -9,7 +9,7 @@
 
 <div class="bookContainer">
 {{#each books}}
-<div class="row">
+{{!-- <div class="row"> --}}
 
   <!--this is the whole book-->
   <div class="book hoveit">
@@ -34,7 +34,7 @@
 
     <!--this is the cover of your book. Put your title here along with anything else-->
     <div class="page cover">
-      <h1>{{this.name}}</h1>
+      <h1><a href="/books/{{this._id}}">{{this.name}}</a></h1>
       <p>{{this.author}}</p>
       <!-- Place this tag where you want the button to render. -->
     </div>
