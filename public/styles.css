@@ -40,7 +40,7 @@ h1.homepage {
 }
 
 .btn-primary {
-    background-color: #f6af42;;
+    background-color: #f6af42;
     border-color: #f6af42;
 }
 
@@ -60,7 +60,7 @@ button.btn.btn-primary {
 
 .btn-danger {
     background-color: #8ccdb0 !important;
-    border-color: #8ccdb0 !important;
+    border-color: #abdfc7 !important;
 }
 
 
@@ -79,3 +79,16 @@ p.text-muted {
 audio, video {
     width: 32%;
 }
+
+
+input[type="submit" i] {
+    color: #f6af42;
+}
+
+img.img-page {
+    width: 100px;
+}
+
+/* a {
+    color: #8ccdb0 !important;
+} */

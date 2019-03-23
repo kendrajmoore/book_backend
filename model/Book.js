@@ -19,6 +19,17 @@ const BookSchema = new Schema({
   pageEight: String, 
   pageNine: String, 
   pageTen: String, 
+  imageOne: { type: String, default: './public/moon.png' },
+  imageTwo: { type: String, default: './public/moon.png' }, 
+  imageThree:{ type: String, default: './public/moon.png' }, 
+  imageFour: { type: String, default: './public/moon.png' }, 
+  imageFive: { type: String, default: './public/moon.png' }, 
+  imageSix: { type: String, default: './public/moon.png' },
+  imageSeven: { type: String, default: './public/moon.png' }, 
+  imageEight: { type: String, default: './public/moon.png' },
+  imageNine: { type: String, default: './public/moon.png' },
+  imageTen: { type: String, default: './public/moon.png' },
+  imageMoon: { type: String, default: './public/moon.png' },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user'

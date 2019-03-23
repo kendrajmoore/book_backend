@@ -7,7 +7,6 @@
 <div class="video">
 <video width="320" height="240" autoplay>
   <source src="{{book.recording}}" type="video/webm">
-  <source src="movie.ogg" type="video/ogg">
 </video>
 </div>
 
@@ -23,8 +22,8 @@
 
     <!--this is the side of your book where you'll put a title, author, or anything else-->
     <div class="bookSide">
-      <p>{{books.name}}</p>
-      <p>{{books.author}}</p>
+      <p>{{book.name}}</p>
+      <p>{{book.author}}</p>
     </div>
 
     <!--this is the side of the book that has pages-->
@@ -57,41 +56,50 @@
 
   <div class="page pagecontent ninthPage">
       {{book.pageNine}}
+      <img class="img-page" src="{{book.imageNine}}" alt="{{this.imageMoon}}">
     </div>
 
   <div class="page pagecontent eigthPage">
       {{book.pageEight}}
+      <img class="img-page" src="{{book.imageEight}}" alt="{{this.imageMoon}}">
     </div>
 
 
    <div class="page pagecontent seventhPage">
       {{book.pageSeven}}
+      <img class="img-page" src="{{book.imageSeven}}" alt="{{this.imageMoon}}">
     </div>
 
 
     <div class="page pagecontent sixthPage">
       {{book.pageSix}}
+       <img class="img-page" src="{{book.imageSix}}" alt="{{this.imageMoon}}">
     </div>
 
     <div class="page pagecontent fiffthPage">
       {{book.pageFive}}
+      <img class="img-page" src="{{book.imageFive}}" alt="{{this.imageMoon}}">
     </div>
 
     <div class="page pagecontent fourthPage">
       {{book.pageFour}}
+      <img class="img-page" src="{{book.imageFour}}" alt="{{this.imageMoon}}">
     </div>
 
 
     <div class="page pagecontent thirdPage">
       {{book.pageThree}}
+      <img class="img-page" src="{{book.imageThree}}" alt="{{this.imageMoon}}">
     </div>
 
     <div class="page pagecontent secondPage">
-          {{book.pageTwo}}
+        {{book.pageTwo}}
+        <img  class="img-page" src="{{book.imageTwo}}" alt="{{this.imageMoon}}">
     </div>
 
     <div class="page pagecontent firstPage">
      {{book.pageOne}}
+     <img class="img-page" src="{{book.imageOne}}" alt="{{this.imageMoon}}">
     </div>
 
   </div><!--book-->

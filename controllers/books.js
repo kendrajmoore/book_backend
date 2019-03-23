@@ -38,10 +38,22 @@ router.post('/books', (req, res) => {
     let pageEight = req.body.pageEight;
     let pageNine = req.body.pageNine; 
     let pageTen = req.body.pageTen;
+    let imageOne = req.body.imageOne; 
+    let imageTwo = req.body.imageTwo;  
+    let imageThree = req.body.imageThree;
+    let imageFour = req.body.imageFour; 
+    let imageFive = req.body.imageFive; 
+    let imageSix = req.body.imageSix;  
+    let imageSeven = req.body.imageSeven;  
+    let imageEight = req.body.imageEight;
+    let imageNine = req.body.imageNine; 
+    let imageTen = req.body.imageTen;
   
     let book = new Book({ name: name, category: category, photos: photos, recording: recording, pageOne: pageOne, 
       pageTwo: pageTwo, pageThree: pageThree, pageFour: pageFour, pageFive: pageFive, pageSix: pageSix,
-      pageSeven: pageSeven, pageEight: pageEight, pageNine: pageNine, pageTen: pageTen, user: user.id });
+      pageSeven: pageSeven, pageEight: pageEight, pageNine: pageNine, pageTen: pageTen, imageTen: imageTen, imageNine: imageNine, 
+      imageEight: imageEight, imageSeven: imageSeven, imageSix: imageSix, imageFive: imageFive,  imageFour: imageFour, imageThree: imageThree, imageTwo: imageTwo,
+      imageOne: imageOne, user: user.id });
     book.save()
     .then(function (savedBook) {
       res.redirect('/books/' + savedBook.id);
