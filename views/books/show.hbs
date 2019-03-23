@@ -1,13 +1,16 @@
 {{> header}}
 {{> nav}}
 
+<div class="show-page">
 
-<a href="https://book-video-kjm.herokuapp.com/">Make A Video</a>
 
-<div class="container">
-<div class="video-container">
-
+<div class="video">
+<video width="320" height="240" autoplay>
+  <source src="{{book.recording}}" type="video/webm">
+  <source src="movie.ogg" type="video/ogg">
+</video>
 </div>
+
 <!--this is the world your book lives in-->
 <div class="bookContainer">
 
@@ -92,7 +95,7 @@
     </div>
 
   </div><!--book-->
-
+</div>
   <style>
     .belowbox {
       position: absolute;
@@ -110,18 +113,16 @@
 </div>
 </div>
 
-<div class="video">
-<video width="320" height="240" autoplay>
-  <source src="/public/video.webm" type="video/webm">
-  <source src="movie.ogg" type="video/ogg">
-Your browser does not support the video tag.
-</video>
 </div>
+
 <!--bookContainer-->
-<a href="/">Back to Home</a>
 
-<p><a href="/books/{{book._id}}/edit">Edit</a></p>
-
-<p><form method="POST" action="/books/{{book._id}}?_method=DELETE">
+<div class="buttons">
+    <a class="btn btn-lg btn-primary" href="href="/"">Home</a>
+    <a class="btn btn-lg btn-primary" href="/books/{{book._id}}/edit">Edit</a>
+    <p><form method="POST" action="/books/{{book._id}}?_method=DELETE">
     <button type="submit">Delete</button>
 </form></p>
+  </div>
+
+

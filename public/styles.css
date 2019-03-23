@@ -23,15 +23,32 @@ body {
     background-color: #8D50F7;
 }
 
-a.nav-link {
+.navbar-dark .navbar-brand {
     color: #8ccdb0;
 }
 
-a.navbar-brand {
+.navbar-dark .navbar-nav .nav-link  {
     color: #8ccdb0;
 }
 
+.account-view-title {
+    color: #8ccdb0;
+}
 
+h1.homepage {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #f6af42;;
+    border-color: #f6af42;
+}
+
+legend {
+    color: #8ccdb0; 
+}
+
+.navbar-dark .navbar-brand
 legend {
     color: #8ccdb0;
 }
@@ -44,4 +61,21 @@ button.btn.btn-primary {
 .btn-danger {
     background-color: #8ccdb0 !important;
     border-color: #8ccdb0 !important;
+}
+
+
+p.text-muted {
+    padding-left: 600px;
+}
+
+.show-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+audio, video {
+    width: 32%;
 }

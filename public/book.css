@@ -21,6 +21,7 @@ Please keep perspective at 2000px*/
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 100px;
   }
   
   /*Here is the book. You can play with the size of it, but you'll need to adjust your other values when you do.
@@ -40,6 +41,7 @@ Please keep perspective at 2000px*/
     transform-style: preserve-3d;
     /*Here is your default book state, change as you wish*/
     transform: rotateY(-35deg) rotateX(0deg) scale(1);
+    margin-bottom: 100px;
   
     /*uncomment this to spin your book around on page load.*/
     /* animation: rotate 10s infinite linear; */

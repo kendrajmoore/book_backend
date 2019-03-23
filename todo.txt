@@ -1,0 +1,6 @@
+debug show page
+video button
+add edit, delete button
+UI index page
+passport login
+add video

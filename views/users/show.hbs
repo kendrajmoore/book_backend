@@ -4,13 +4,13 @@
 <div class="row" id="account">
     <div class="col-sm-6 col-sm-offset-3">
         <h1 class="account-view-title">Account Information</h1>
-        <h3>Username: {{user.username}}</h3>
-        <p>Email: {{user.emailAddress}}</p>
-        <p>Book Collection: {{user.bookList}}</p>
+        <h3 class="account-view-title">Username: {{user.username}}</h3>
+        <p class="account-view-title">Email: {{user.emailAddress}}</p>
+        <p class="account-view-title">Book Collection: {{user.bookList}}</p>
     
         <!-- Buttons-->
-        <p><a class="button is-success" href="/users/{{user._id}}/edit">Edit</a></p>
-        <a class="button is-success" href="/">Back</a><br>
+        <p><a class="btn btn-lg btn-primary" href="/users/{{user._id}}/edit">Edit</a></p>
+        <a class="btn btn-lg btn-primary" href="/">Back</a><br>
         <p>
             <form method="POST" action="/users/{{user._id}}?_method=DELETE">
                <button class="button is-danger" type="submit">Delete</button>
