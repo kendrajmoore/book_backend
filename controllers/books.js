@@ -39,6 +39,18 @@ router.post('/books', (req, res) => {
     let pageEight = req.body.pageEight;
     let pageNine = req.body.pageNine; 
     let pageTen = req.body.pageTen;
+    let pageEleven = req.body.pageEleven;
+    let pageTwelve = req.body.pageTwelve;
+    let pageThirteen = req.body.pageThirteen;
+    let pageFourteen = req.body.pageFourteen;
+    let pageFifteen = req.body.pageFifteen;
+    let pageSixteen = req.body.pageSixteen;
+    let pageSeventeen = req.body.pageSeventeen;
+    let pageEighteen = req.body.pageEighteen;
+    let pageNineteen = req.body.pageNineteen;
+    let pageTwenty = req.body.pageTwenty;
+    let pageTwentyOne = req.body.pageTwentyOne;
+
     let imageOne = req.body.imageOne; 
     let imageTwo = req.body.imageTwo;  
     let imageThree = req.body.imageThree;
@@ -49,11 +61,29 @@ router.post('/books', (req, res) => {
     let imageEight = req.body.imageEight;
     let imageNine = req.body.imageNine; 
     let imageTen = req.body.imageTen;
+    let imageEleven = req.body.imageEleven; 
+    let imageTwelve = req.body.imageTwelve;  
+    let imageThirteen = req.body.imageThirteen;
+    let imageFourteen = req.body.imageFourteen; 
+    let imageFifteen = req.body.imageFifteen; 
+    let imageSixteen = req.body.imageSixteen;  
+    let imageSeventeen = req.body.imageSeventeen;  
+    let imageEighteen = req.body.imageEighteen;
+    let imageNineteen = req.body.imageNineteen; 
+    let imageTwenty = req.body.iimageTwenty;
   
     let book = new Book({ name: name, category: category, photos: photos, recording: recording, author: author, pageOne: pageOne, 
       pageTwo: pageTwo, pageThree: pageThree, pageFour: pageFour, pageFive: pageFive, pageSix: pageSix,
-      pageSeven: pageSeven, pageEight: pageEight, pageNine: pageNine, pageTen: pageTen, imageTen: imageTen, imageNine: imageNine, 
-      imageEight: imageEight, imageSeven: imageSeven, imageSix: imageSix, imageFive: imageFive,  imageFour: imageFour, imageThree: imageThree, imageTwo: imageTwo,
+      pageSeven: pageSeven, pageEight: pageEight, pageNine: pageNine, pageTen: pageTen, pageEleven: pageEleven,
+      pageTwelve: pageTwelve, pageThirteen: pageThirteen, pageFourteen: pageFourteen, 
+      pageFifteen: pageFifteen, pageSixteen: pageSixteen, pageSeventeen: pageSeventeen,
+      pageEighteen: pageEighteen, pageNineteen: pageNineteen, pageTwenty: pageTwenty, pageTwentyOne: pageTwentyOne,
+      imageTwenty: imageTwenty, imageNineteen: imageNineteen, imageEighteen: imageEighteen, imageSeventeen: imageSeventeen,
+      imageSixteen: imageSixteen, imageFifteen: imageFifteen, imageFourteen: imageFourteen, imageThirteen: imageThirteen,
+      imageTwelve: imageTwelve, imageEleven: imageEleven,
+      imageTen: imageTen, imageNine: imageNine, 
+      imageEight: imageEight, imageSeven: imageSeven, imageSix: imageSix, imageFive: imageFive,  imageFour: imageFour, 
+      imageThree: imageThree, imageTwo: imageTwo,
       imageOne: imageOne, user: user.id });
     book.save()
     .then(function (savedBook) {
