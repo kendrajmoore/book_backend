@@ -26,6 +26,7 @@ router.post('/books', (req, res) => {
     let name = req.body.name;
     let category = req.body.category;
     let photos = req.body.photos;
+    let author = req.body.author;
     let recording = req.body.recording;
     let user = req.user;
     let pageOne = req.body.pageOne; 
@@ -49,7 +50,7 @@ router.post('/books', (req, res) => {
     let imageNine = req.body.imageNine; 
     let imageTen = req.body.imageTen;
   
-    let book = new Book({ name: name, category: category, photos: photos, recording: recording, pageOne: pageOne, 
+    let book = new Book({ name: name, category: category, photos: photos, recording: recording, author: author, pageOne: pageOne, 
       pageTwo: pageTwo, pageThree: pageThree, pageFour: pageFour, pageFive: pageFive, pageSix: pageSix,
       pageSeven: pageSeven, pageEight: pageEight, pageNine: pageNine, pageTen: pageTen, imageTen: imageTen, imageNine: imageNine, 
       imageEight: imageEight, imageSeven: imageSeven, imageSix: imageSix, imageFive: imageFive,  imageFour: imageFour, imageThree: imageThree, imageTwo: imageTwo,
@@ -63,12 +64,17 @@ router.post('/books', (req, res) => {
 
 //NEW
 router.get("/books/new", (req, res) => {
+  const currentUser = req.user;
   res.render("books/new.hbs", { currentUser: req.user });
 });
 
 
 // SHOW
 router.get("/books/:id", (req, res) => {
+  // const currentUser = req.user;
+  // if (currentUser === null) {
+  //     res.redirect("/users/login");
+  // }
   Book.findById(req.params.id)
     .then(book => {
       res.render("books/show.hbs", {book, currentUser: req.user });
@@ -82,7 +88,7 @@ router.get("/books/:id", (req, res) => {
 router.get("/books/:id/edit", (req, res) => {
     const currentUser = req.user;
     if (currentUser === null) {
-        res.redirect("/user/login");
+        res.redirect("/users/login");
     }
     Book.findById(req.params.id, function(err, book) {
     res.render("books/edit.hbs", { currentUser: req.user });
@@ -92,7 +98,7 @@ router.get("/books/:id/edit", (req, res) => {
 //UPDATE
 router.put("/books/:id", (req, res) => {
     if (currentUser === null) {
-        res.redirect("/user/login");
+        res.redirect("/users/login");
     }
   Book.findByIdAndUpdate(req.params.id, req.body)
     .then(book => {
@@ -106,7 +112,7 @@ router.put("/books/:id", (req, res) => {
 // DELETE
 router.delete("/books/:id", function(req, res) {
     if (currentUser === null) {
-        res.redirect("/user/login");
+        res.redirect("/users/login");
     } 
   Book.findByIdAndRemove(req.params.id)
     .then(book => {
