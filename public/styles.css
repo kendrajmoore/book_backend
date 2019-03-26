@@ -78,7 +78,8 @@ p.text-muted {
 }
 
 audio, video {
-    width: 32%;
+    width: 80%;
+    margin-top: 100px;
 }
 
 
