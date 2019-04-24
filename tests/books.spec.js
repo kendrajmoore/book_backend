@@ -7,7 +7,7 @@ var app = require('../server.js');
 
 var Book = require('../model/Book');
 var User = require('../model/User');
-var category = 'vacation-property';
+// var category = 'vacation-property';
 var photos = 'http://images.com/example.png';
 var agent = supertest(app);
 
