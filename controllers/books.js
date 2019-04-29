@@ -4,7 +4,7 @@ const router = express.Router();
 
 const Book = require("../model/Book");
 
-const User = require("../model/User");
+const User = require("../model/Users");
 
 
 
