@@ -1,15 +1,15 @@
 
-var expect = require('chai').expect;
-var supertest = require('supertest');
+const expect = require('chai').expect;
+const supertest = require('supertest');
 
-var app = require('../server.js');
+const app = require('../server.js');
 
 
-var Book = require('../model/Book');
-var User = require('../model/User');
-// var category = 'vacation-property';
-var photos = 'http://images.com/example.png';
-var agent = supertest(app);
+const Book = require('../model/Book');
+const User = require('../model/User');
+
+const photos = 'http://images.com/example.png';
+const agent = supertest(app);
 
 
 //user model
@@ -144,13 +144,13 @@ describe('books', function () {
   });
 });
 
-var user = new User({
+const user = new User({
   email: 'me@example.com',
   username: 'bob',
   password: 's3cr3t'
 });
 
-var authenticateUser = function() {
+const authenticateUser = function() {
   user.save()
   .then(function () {
     agent

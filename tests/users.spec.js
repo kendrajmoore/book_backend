@@ -1,9 +1,9 @@
-var expect = require('chai').expect
+const expect = require('chai').expect
   , supertest = require('supertest')
   , mongoose = require('mongoose')
   , app = require('../server')
 
-var agent = supertest(app);
+const agent = supertest(app);
 
 describe('users', function () {
   describe('GET /users/new', function () {
