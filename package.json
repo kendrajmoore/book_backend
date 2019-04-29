@@ -18,6 +18,7 @@
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
+    "express-session": "^1.16.1",
     "file-system": "^2.2.2",
     "flipbook-library": "^1.0.2",
     "jsonwebtoken": "^8.5.0",
@@ -25,6 +26,7 @@
     "mongoose": "^5.4.19",
     "mongoose-deep-populate": "^3.1.1",
     "morgan": "^1.9.1",
+    "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "serve-favicon": "^2.5.0",
     "url": "^0.11.0"

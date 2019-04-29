@@ -1,8 +1,11 @@
 //express
 const express = require("express");
+//require path
+const path = require('path');
 const app = express();
 const dotenv = require("dotenv").config();
 const favicon = require('serve-favicon');
+const session = require('express-session');
 //require handlebars
 const hbs = require("express-handlebars");
 //body-parser
@@ -18,17 +21,14 @@ const fs = require('file-system');
 const url = require('url');
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
-
-//require path
-const path = require('path');
+//SET UP MONGOOSE
+const mongoose = require("mongoose");
 
 
 // Port
 const port = process.env.PORT || 3000;
 
 
-//SET UP MONGOOSE
-const mongoose = require("mongoose");
 
 
 //require express handlebars
@@ -47,12 +47,12 @@ app.use(
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(morgan("dev"));
-
 app.use(cors());
 
 
 // static files middleware
 app.use('/public', express.static(path.join(__dirname, 'public')))
+app.use(session({ secret: 'passport-tutorial', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
 
 // Mongoose Connection
 const mongoUri =
