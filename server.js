@@ -66,6 +66,7 @@ mongoose.connect(
 
 require('./model/Users');
 require('./config/passport');
+app.use(require('./controllers'));
 
 
 //USER AUTH
@@ -86,8 +87,8 @@ require('./config/passport');
 // app.use(checkAuth);
 
 
-const usersController = require("./controllers/users");
-app.use(usersController);
+// const usersController = require("./controllers/users");
+// app.use(usersController);
 
 const booksController = require("./controllers/books");
 app.use(booksController);
