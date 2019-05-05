@@ -17,18 +17,14 @@ const cookieParser = require("cookie-parser");
 //delete, edit
 const methodOverride = require("method-override");
 //for video recording
-const fs = require('file-system');
-const url = require('url');
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
 //SET UP MONGOOSE
 const mongoose = require("mongoose");
-
+const MongoDBStore = require('connect-mongodb-session')(session);
 
 // Port
 const port = process.env.PORT || 3000;
-
-
 
 
 //require express handlebars
@@ -49,11 +45,6 @@ app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(cors());
 
-
-// static files middleware
-app.use('/public', express.static(path.join(__dirname, 'public')))
-app.use(session({ secret: 'passport-tutorial', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
-
 // Mongoose Connection
 const mongoUri =
   process.env.MONGODB_URI || "mongodb://localhost:27017/storys";
@@ -64,34 +55,46 @@ mongoose.connect(
   }
 );
 
-require('./model/Users');
-require('./config/passport');
-app.use(require('./controllers'));
+//session store
+const store = new MongoDBStore({
+  uri: mongoUri,
+  collection: 'sessions'
+});
 
+// static files middleware
+app.use('/public', express.static(path.join(__dirname, 'public')))
+app.use(
+  session({
+    secret: 'my secret',
+    resave: false,
+    saveUninitialized: false,
+    store: store
+  })
+);
 
-//USER AUTH
-// var checkAuth = (req, res, next) => {
-//   if (
-//       typeof req.cookies.nToken === "undefined" ||
-//       req.cookies.nToken === null
-//   ) {
-//       req.user = null;
-//   } else {
-//       var token = req.cookies.nToken;
-//       var decodedToken = jwt.decode(token, { complete: true }) || {};
-//       req.user = decodedToken.payload;
-//   }
+//user session
+app.use((req, res, next) => {
+  if (!req.session.user) {
+    return next();
+  }
+  User.findById(req.session.user._id)
+    .then(user => {
+      req.user = user;
+      next();
+    })
+    .catch(err => console.log(err));
+});
 
-//   next();
-// };
-// app.use(checkAuth);
+// require('./models/User');
+// require('./models/Book');
+// app.use(require('./controllers'));
 
-
-// const usersController = require("./controllers/users");
-// app.use(usersController);
 
 const booksController = require("./controllers/books");
 app.use(booksController);
+
+const usersController = require("./controllers/users");
+app.use(usersController);
 
 //index page
 app.get("/", (req, res) => {
