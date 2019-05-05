@@ -45,7 +45,7 @@ router.post("/users/login", (req, res) => {
         .then(user => {
             if (!user) {
                 // User not found
-                return res.status(401).send({ message: "Wrong try again" });
+                res.render("wrong");
             }
             // Check the password
             user.comparePassword(password, (err, isMatch) => {
