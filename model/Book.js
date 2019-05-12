@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-//user model
+//user model - this does not scale but i got finals
 const BookSchema = new Schema({
   name: String,
   author: String,

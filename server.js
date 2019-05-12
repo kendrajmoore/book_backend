@@ -54,6 +54,16 @@ app.use(cors());
 app.use('/public', express.static(path.join(__dirname, 'public')))
 app.use(session({ secret: 'passport-tutorial', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
 
+// // Mongoose Connection Docker
+// const mongoUri =
+//   process.env.MONGODB_URI || "mongodb://mongo_bookz:27017/storys";
+// mongoose.connect(
+//   mongoUri,
+//   {
+//     useNewUrlParser: true
+//   }
+// );
+
 // Mongoose Connection
 const mongoUri =
   process.env.MONGODB_URI || "mongodb://localhost:27017/storys";
@@ -65,15 +75,15 @@ mongoose.connect(
 );
 
 //USER AUTH
-var checkAuth = (req, res, next) => {
+let checkAuth = (req, res, next) => {
   if (
       typeof req.cookies.nToken === "undefined" ||
       req.cookies.nToken === null
   ) {
       req.user = null;
   } else {
-      var token = req.cookies.nToken;
-      var decodedToken = jwt.decode(token, { complete: true }) || {};
+      let token = req.cookies.nToken;
+      let decodedToken = jwt.decode(token, { complete: true }) || {};
       req.user = decodedToken.payload;
   }
 

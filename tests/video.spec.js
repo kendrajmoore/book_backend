@@ -8,7 +8,7 @@ const User = require('../model/User');
 const Video = require('../model/Video');
 
 
-//video model
+//video model-in the future
 const VideoSchema = new Schema({
     name: String,
     url: String,
