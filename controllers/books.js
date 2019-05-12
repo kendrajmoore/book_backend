@@ -50,6 +50,9 @@ router.post('/books', (req, res) => {
     book.save()
     .then(function (savedBook) {
       res.redirect('/books/' + savedBook.id);
+    }).catch(err => {
+      res.render("wrong");
+      console.log(err);
     });
   });
   

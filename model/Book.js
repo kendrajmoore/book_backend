@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 //user model - only require name for ease of testing 
 const BookSchema = new Schema({
-  name: { type: String, required: true },
+  name: String,
   author: String,
   category: String,
   photos: String,

@@ -51,7 +51,7 @@ router.post("/users/login", (req, res) => {
             user.comparePassword(password, (err, isMatch) => {
                 if (!isMatch) {
                     // Password does not match
-                    return res.status(401).send({ message: "Wrong try again" });
+                    res.render("wrong");
                 }
                 // Create a token
                 const token = jwt.sign(
