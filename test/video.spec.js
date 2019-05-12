@@ -6,6 +6,7 @@ const app = require('../server.js');
 const Book = require('../model/Book');
 const User = require('../model/User');
 const Video = require('../model/Video');
+const Schema = mongoose.Schema;
 
 
 //video model-in the future
@@ -49,4 +50,4 @@ describe('video', function () {
           });
       });
     });
-
+})

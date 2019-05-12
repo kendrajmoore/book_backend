@@ -4,6 +4,7 @@ const expect = require('chai').expect
   , app = require('../server')
 
 const agent = supertest(app);
+const Schema = mongoose.Schema;
 
 describe('users', function () {
   describe('GET /users/new', function () {

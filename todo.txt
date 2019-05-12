@@ -1,6 +1,7 @@
-debug show page
-video button
-add edit, delete button
-UI index page
-passport login
-add video
+
+Improvements
+
+Shorten model - .5
+Update tests - 2
+Update team image - .5
+Require name -.5
